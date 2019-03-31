@@ -1,2 +1,2 @@
 # gravityfalls-workshop
-gravityfalls-workshop
+Gravity Falls Workshop
