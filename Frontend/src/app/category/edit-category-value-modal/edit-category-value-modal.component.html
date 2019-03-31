@@ -1,0 +1,18 @@
+<p-dialog header="Editar Valor de Categoria" [(visible)]="visible" [modal]="true" [dismissableMask]="true"
+  [closeOnEscape]="true" [responsive]="true" [closable]="true" (onHide)="close($event)" width="400" height="300">
+
+  <br>
+  Valor de Categoria:
+
+  <span *ngIf="selectedCategoryValue">
+    <input type="text" pInputText [(ngModel)]="selectedCategoryValue.categoryValueName" />
+  </span>
+
+  <br>
+  <br>
+
+  <button pButton type="button" label="cancelar" (click)="close($event)"></button>
+  &nbsp;&nbsp;
+  <button pButton type="button" label="confirmar" (click)="confirmAction()"></button>
+
+</p-dialog>

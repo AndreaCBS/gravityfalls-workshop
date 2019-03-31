@@ -1,0 +1,16 @@
+<p-dialog header="Agregar Categoria" appendTo="body" [(visible)]="visible" [modal]="true" [dismissableMask]="true"
+  [closeOnEscape]="true" [responsive]="true" [closable]="true" (onHide)="close($event)" width="400" height="300" >
+
+  <br>
+  Categoria:
+  
+  <input type="text" pInputText [(ngModel)]="newValueName" />
+
+  <br>
+  <br>
+
+  <button pButton type="button" label="cancelar" (click)="close($event)"></button>
+  &nbsp;&nbsp;
+  <button pButton type="button" label="confirmar" (click)="confirmAction()"></button>
+
+</p-dialog>

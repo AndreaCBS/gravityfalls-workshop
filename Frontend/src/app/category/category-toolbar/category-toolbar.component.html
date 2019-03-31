@@ -1,0 +1,14 @@
+<div style="text-align:left">
+    <br>
+    <button pButton type="button" label="Agregar Categoría Valor"
+        (click)="showAddCategoryValueModal()"></button>&nbsp;&nbsp;
+    <button pButton type="button" label="Eliminar Categoría" (click)="showRemoveCategoryModal()"></button>
+</div>
+
+<add-category-value-modal [refreshDataEvent]="refreshChildDataSubject.asObservable()"
+    [(visible)]="displayAddCategoryValueModal" (onClose)="hideAddCategoryValueModal()">
+</add-category-value-modal>
+
+<remove-category-modal [refreshDataEvent]="refreshChildDataSubject.asObservable()"
+    [(visible)]="displayRemoveCategoryModal" (onClose)="hideRemoveCategoryModal()">
+</remove-category-modal>

@@ -1,0 +1,32 @@
+<p-dialog header="Agregar Categoria Valor" [(visible)]="visible" [modal]="true" [dismissableMask]="true"
+  [closeOnEscape]="true" [responsive]="true" [closable]="true" (onHide)="close($event)" width="600" height="400">
+
+  <br>
+  Categoria:
+  <p-dropdown [options]="categoriesList" [(ngModel)]="selectedCategory"></p-dropdown>
+  &nbsp;&nbsp;
+  <button pButton type="button" label="Nueva" (click)="showAddCategoryModal()" class="ui-button-secondary"></button>
+  &nbsp;&nbsp;
+  <button pButton type="button" label="Editar" (click)="showEditCategoryModal()" class="ui-button-secondary"></button>
+
+  <br>
+  <br>
+  Nuevo Valor:
+  <input type="text" pInputText [(ngModel)]="newValueName" />
+
+  <br>
+  <br>
+
+  <button pButton type="button" label="cancelar" (click)="close($event)"></button>
+  &nbsp;&nbsp;
+  <button pButton type="button" label="confirmar" (click)="confirmAction()"></button>
+
+</p-dialog>
+
+<add-category-modal [(visible)]="displayAddCategoryModal" (onClose)="hideAddCategoryModal()"
+  (refreshParentData)="refreshData()">
+</add-category-modal>
+
+<edit-category-modal [selectedCategory]="selectedCategory" 
+  [(visible)]="displayEditCategoryModal" (onClose)="hideEditCategoryModal()" (onRefreshParentData)="refreshData()">
+</edit-category-modal>

@@ -1,0 +1,15 @@
+<p-dialog header="Eliminar Categoria" [(visible)]="visible" [modal]="true" [dismissableMask]="true"
+  [closeOnEscape]="true" [responsive]="true" [closable]="true" (onHide)="close($event)"  width="600" height="400">
+ 
+  <br>
+  Categoria:
+  <p-dropdown [options]="categoriesList" [(ngModel)]="selectedCategory"></p-dropdown>
+
+   <br>
+  <br>
+
+  <button pButton type="button" label="cancelar" (click)="close($event)"></button>
+  &nbsp;&nbsp;
+  <button pButton type="button" label="confirmar" (click)="confirmAction()"></button>
+
+</p-dialog>

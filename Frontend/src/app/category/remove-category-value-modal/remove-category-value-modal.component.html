@@ -1,0 +1,18 @@
+<p-dialog header="Eliminar Categoria Valor" [(visible)]="visible" [modal]="true" [dismissableMask]="true"
+    [closeOnEscape]="true" [responsive]="true" [closable]="true" (onHide)="close($event)" width="600" height="400">
+
+    <br>
+    Eliminar Categoria Valor
+    <br>
+    <br>
+    <span *ngIf="selectedCategoryValue">
+        {{ selectedCategoryValue.categoryName }}&nbsp;/&nbsp;{{ selectedCategoryValue.categoryValueName }}
+    </span>
+    <br>
+    <br>
+
+    <button pButton type="button" label="cancelar" (click)="close($event)"></button>
+    &nbsp;&nbsp;
+    <button pButton type="button" label="confirmar" (click)="confirmAction()"></button>
+
+</p-dialog>
